@@ -3,32 +3,39 @@ import { ArrowRight, Building2, CheckCircle, Globe, Home, Lightbulb, LifeBuoy, S
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import contactUsBg from "@/lib/assets/services.jpg"; // Adjust this import path as needed
+import Image from "next/image"
+
 
 export default function ServicesPage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
       <section className="relative py-20 bg-emerald-800 text-white">
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Services & Divisions</h1>
-            <p className="text-xl mb-8">
-              Discover our comprehensive range of services designed to meet your needs across multiple industries.
-            </p>
-            <Button asChild size="lg" className="bg-white text-emerald-800 hover:bg-gray-100">
-              <a href="#divisions">Explore Our Divisions</a>
-            </Button>
-          </div>
-        </div>
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute inset-0 bg-black/40 z-0"></div>
-          <img
-            src="/placeholder.svg?height=800&width=1600&text=Services"
-            alt="Services banner"
-            className="w-full h-full object-cover"
-          />
-        </div>
-      </section>
+  {/* Background image */}
+  <div className="absolute inset-0 z-0">
+    <Image
+      src={contactUsBg} // Using the imported image
+      alt="Contact Us Background"
+      fill
+      className="object-cover"
+      quality={100}
+      priority
+    />
+  </div>
+  
+  {/* Semi-transparent overlay */}
+  <div className="absolute inset-0 bg-black/50 z-0"></div>
+  
+  <div className="container mx-auto px-4 relative z-10">
+    {/* Contact Us Title */}
+    <h1 className="text-4xl font-semibold text-center text-white mb-8">
+      Our Services
+    </h1>
+    
+    {/* You can add more content here for the rest of your hero section */}
+  </div>
+</section>
 
       {/* Overview Section */}
       <section className="py-20 bg-white">

@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { Facebook, Instagram, Linkedin, Twitter, ArrowUp, Mail, Phone, MapPin } from "lucide-react"
 import { motion } from "framer-motion"
+import Image from "next/image"
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -38,8 +39,16 @@ export default function Footer() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-xl font-bold mb-4 font-display">Novus Global</h3>
-            <div className="h-8 w-auto font-bold text-2xl text-emerald-400 mb-4">NOVUS</div>
+            <h3 className="text-xl font-bold mb-4 font-display">Cynot Technologies</h3>
+            <div className="h-16 w-auto mb-4">
+              <Image
+                src="/cynotLogo.png"
+                alt="Cynot Logo"
+                width={75}  // Adjust based on your logo's aspect ratio
+                height={32}   // Adjust based on your logo's aspect ratio
+                className="object-contain"
+              />
+            </div>
             <p className="text-gray-400 mb-4">
               Building innovative solutions for a better tomorrow. Our commitment to excellence and sustainability
               drives everything we do.
@@ -65,6 +74,7 @@ export default function Footer() {
             </div>
           </motion.div>
 
+          {/* Rest of your footer content remains the same */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -144,21 +154,22 @@ export default function Footer() {
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-emerald-400 mr-3 mt-1" />
                 <address className="not-italic text-gray-400">
-                  <p>123 Innovation Avenue</p>
-                  <p>Business District, CA 90210</p>
-                  <p>United States</p>
-                </address>
+  <p>Chirayath Arcade</p>
+  <p>Koratty, Thrissur, Kerala 680308</p>
+  <p>India</p>
+</address>
+
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 text-emerald-400 mr-3" />
                 <a href="mailto:info@novusglobal.com" className="text-gray-400 hover:text-white transition-colors">
-                  info@novusglobal.com
+                  cynottechnologies@gmail.com
                 </a>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 text-emerald-400 mr-3" />
-                <a href="tel:+15551234567" className="text-gray-400 hover:text-white transition-colors">
-                  +1 (555) 123-4567
+                <a href="tel:+919020555800" className="text-gray-400 hover:text-white transition-colors">
+                +91 9020555800
                 </a>
               </li>
             </ul>
@@ -166,7 +177,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm mb-4 md:mb-0">&copy; {currentYear} Novus Global. All rights reserved.</p>
+          <p className="text-gray-400 text-sm mb-4 md:mb-0">&copy; {currentYear} Cynot Technologies. All rights reserved.</p>
           <div className="flex space-x-6">
             {[
               { name: "Privacy Policy", href: "/privacy-policy" },

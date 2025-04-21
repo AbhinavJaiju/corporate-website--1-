@@ -206,10 +206,10 @@ export default function HomePage() {
               <div className="inline-flex items-center bg-emerald-100 text-emerald-800 rounded-full px-4 py-1 text-sm font-medium mb-4">
                 Our Story
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 font-display">Pioneering Excellence Since 2008</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 font-display">Pioneering Excellence Since 2021</h2>
               <p className="text-gray-700 mb-4">
                 Founded with a vision to revolutionize how businesses approach sustainability and innovation, we've
-                grown from a small team of passionate experts to a global organization with a presence in 12 countries.
+                grown from a small team of passionate experts to a global organization with a presence in 6 countries.
               </p>
               <p className="text-gray-700 mb-6">
                 Our journey has been defined by a relentless pursuit of excellence, a commitment to ethical practices,
@@ -318,7 +318,7 @@ export default function HomePage() {
                 </motion.div>
               </div>
               <div className="absolute -bottom-6 -right-6 bg-emerald-600 text-white p-6 rounded-lg shadow-lg hidden md:block">
-                <p className="text-2xl font-bold">15+ Years</p>
+                <p className="text-2xl font-bold">2+ Years</p>
                 <p>of Excellence</p>
               </div>
             </motion.div>
@@ -393,7 +393,7 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials & Social Responsibility */}
-      <section className="py-20 bg-gray-50" ref={testimonialsRef}>
+      {/* <section className="py-20 bg-gray-50" ref={testimonialsRef}>
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <motion.div
@@ -482,10 +482,10 @@ export default function HomePage() {
             </motion.div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Partners Section */}
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <SectionHeading
             title="Our Trusted Partners"
@@ -508,7 +508,7 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-emerald-800 to-teal-700 text-white relative overflow-hidden">

@@ -18,9 +18,12 @@ const outfit = Outfit({
 })
 
 export const metadata = {
-  title: "Corporate Website",
+  title: "Cynot Technologies",
   description: "A modern corporate website showcasing our services and projects",
-    generator: 'v0.dev'
+  generator: "v0.dev",
+  icons: {
+    icon: "/cynotLogo.png", // Path to your logo in the public folder
+  },
 }
 
 export default function RootLayout({

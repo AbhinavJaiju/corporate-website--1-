@@ -2,6 +2,8 @@ import Link from "next/link"
 import { ArrowRight, ExternalLink } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import Image from "next/image"
+import AboutUs1 from "@/lib/assets/portfolio.jpg";
 
 export default function PortfolioPage() {
   return (
@@ -21,11 +23,15 @@ export default function PortfolioPage() {
         </div>
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute inset-0 bg-black/40 z-0"></div>
-          <img
-            src="/placeholder.svg?height=800&width=1600&text=Portfolio"
-            alt="Portfolio banner"
-            className="w-full h-full object-cover"
-          />
+          <Image
+                  src={AboutUs1} // Using the imported image
+                  alt="About Us Image"
+                  fill
+                  className="object-cover"
+                  quality={100}
+                  priority
+                />
+
         </div>
       </section>
 
@@ -229,7 +235,7 @@ export default function PortfolioPage() {
       </section>
 
       {/* Awards & Recognition */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Awards & Recognition</h2>
@@ -259,7 +265,7 @@ export default function PortfolioPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-16 bg-emerald-800 text-white">

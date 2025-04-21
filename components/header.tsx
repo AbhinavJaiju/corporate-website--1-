@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -37,23 +38,20 @@ export default function Header() {
       )}
     >
       <nav className="container mx-auto px-4 flex items-center justify-between">
-        <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5">
-            <span className="sr-only">Novus Global</span>
-            <motion.div
-              className={cn(
-                "h-8 w-auto font-bold text-2xl transition-colors duration-300 flex items-center",
-                scrolled ? "text-emerald-700" : "text-white",
-              )}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <span className="bg-emerald-600 text-white px-2 py-1 rounded mr-1">N</span>
-              <span>OVUS</span>
-            </motion.div>
-          </Link>
-        </div>
+      <div className="flex flex-row items-center lg:flex-1">
+  <Link href="/" className="flex items-center gap-2 -m-1.5 p-1.5">
+    <Image
+      src="/cynotLogo.png"
+      alt="Cynot Logo"
+      width={60}
+      height={20}
+      priority
+      className={cn("transition-all", scrolled ? "opacity-90" : "opacity-100")}
+    />
+    <div className="font-bold text-2xl text-emerald-400">CYNOT</div>
+  </Link>
+</div>
+
 
         {/* Mobile menu button */}
         <div className="flex lg:hidden">
@@ -127,11 +125,13 @@ export default function Header() {
             <div className="fixed inset-0 z-50">
               <div className="flex items-center justify-between p-4">
                 <Link href="/" className="-m-1.5 p-1.5" onClick={() => setMobileMenuOpen(false)}>
-                  <span className="sr-only">Novus Global</span>
-                  <div className="h-8 w-auto font-bold text-2xl flex items-center">
-                    <span className="bg-emerald-600 text-white px-2 py-1 rounded mr-1">N</span>
-                    <span className="text-emerald-700">OVUS</span>
-                  </div>
+                  <Image
+                    src="/cynotLogo.png"
+                    alt="Cynot Logo"
+                    width={120}
+                    height={40}
+                    priority
+                  />
                 </Link>
                 <button
                   type="button"
